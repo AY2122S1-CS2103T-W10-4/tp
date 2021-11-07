@@ -409,7 +409,7 @@ The following sequence diagram shows how the cost-sum-checking operation works:
 
 _{more aspects and alternatives to be added}_
 
-### Delete By Tag feature
+### Delete by tag feature
 
 #### Implementation
 
@@ -475,7 +475,7 @@ The following activity diagram summarizes what happens when a user executes a ne
 
 _{more aspects and alternatives to be added}_
 
-### Report feature (Status)
+### Report feature (status)
 
 #### Implementation
 <div markdown="span" class="alert alert-info">
