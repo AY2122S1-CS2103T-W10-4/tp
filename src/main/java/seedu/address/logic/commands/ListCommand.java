@@ -14,13 +14,10 @@ public class ListCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Listed all persons";
 
-    private UndoCommand commandToUndo;
 
     @Override
     public CommandResult execute(Model model) {
         requireNonNull(model);
-        commandToUndo = new UndoCommand();
-        commandToUndo.setPrevCommand(this);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(MESSAGE_SUCCESS);
     }

@@ -66,11 +66,7 @@ dependencies {
 }
 
 shadowJar {
-    archiveName = 'WedFast.jar'
-}
-
-run {
-    enableAssertions = true
+    archiveName = 'addressbook.jar'
 }
 
 defaultTasks 'clean', 'test'

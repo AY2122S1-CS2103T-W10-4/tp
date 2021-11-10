@@ -9,7 +9,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.person.predicates.NameContainsKeywordsPredicate;
 import seedu.address.testutil.PersonBuilder;
 
 public class NameContainsKeywordsPredicateTest {
@@ -71,7 +70,6 @@ public class NameContainsKeywordsPredicateTest {
         // Keywords match phone, email and address, but does not match name
         predicate = new NameContainsKeywordsPredicate(Arrays.asList("12345", "alice@email.com", "Main", "Street"));
         assertFalse(predicate.test(new PersonBuilder().withName("Alice").withPhone("12345")
-                .withEmail("alice@email.com").withAddress("Main Street").withPrice("0.00")
-                .withInfo("none").withStatus("Pending").build()));
+                .withEmail("alice@email.com").withAddress("Main Street").build()));
     }
 }

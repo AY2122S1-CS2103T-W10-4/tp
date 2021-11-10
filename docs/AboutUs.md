@@ -5,53 +5,55 @@ title: About Us
 
 We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
 
+You can reach us at the email `seer[at]comp.nus.edu.sg`
+
 ## Project team
 
-### Ravi Ananya
+### John Doe
 
-<img src="images/banana3021.png" width="200px">
+<img src="images/johndoe.png" width="200px">
 
-[[github](https://github.com/Banana3021)]
-[[portfolio](team/banana3021.md)]
+[[homepage](http://www.comp.nus.edu.sg/~damithch)]
+[[github](https://github.com/johndoe)]
+[[portfolio](team/johndoe.md)]
 
-* Role: Developer
-* Responsibilities: Feature Development + Data
+* Role: Project Advisor
 
-### Shui Jie
+### Jane Doe
 
-<img src="images/sj1999-bit.png" width="200px">
+<img src="images/johndoe.png" width="200px">
 
-[[github](https://github.com/sj1999-BIT)]
-[[portfolio](team/sj1999-bit.md)]
+[[github](http://github.com/johndoe)]
+[[portfolio](team/johndoe.md)]
 
-* Role: developer
-* Responsibilities: Add filter contact, add group contact
+* Role: Team Lead
+* Responsibilities: UI
 
-### Ruohang Yin
+### Johnny Doe
 
-<img src="images/yin72257.png" width="200px">
+<img src="images/johndoe.png" width="200px">
 
-[[github](http://github.com/yin72257)] [[portfolio](team/yin72257.md)]
-
-* Role: Developer
-* Responsibilities: Feature development
-
-### Linda Tom
-
-<img src="images/linda124.png" width="200px">
-
-[[github](http://github.com/linda124)]
-[[portfolio](team/linda124.md)]
+[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
 
 * Role: Developer
-* Responsibilities: Feature development
+* Responsibilities: Data
 
-### Desmond To Cie Hong
+### Jean Doe
 
-<img src="images/desmondto.png" width="200px">
+<img src="images/johndoe.png" width="200px">
 
-[[github](http://github.com/desmondto)]
-[[portfolio](team/desmondto.md)]
+[[github](http://github.com/johndoe)]
+[[portfolio](team/johndoe.md)]
 
-* Role: Developer + UI Designer
-* Responsibilities: Develop the features laid out in the plan + Translating requirements into attractive user interfaces.
+* Role: Developer
+* Responsibilities: Dev Ops + Threading
+
+### James Doe
+
+<img src="images/johndoe.png" width="200px">
+
+[[github](http://github.com/johndoe)]
+[[portfolio](team/johndoe.md)]
+
+* Role: Developer
+* Responsibilities: UI

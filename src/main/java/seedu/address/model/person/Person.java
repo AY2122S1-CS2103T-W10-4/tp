@@ -1,3 +1,4 @@
+
 package seedu.address.model.person;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
@@ -19,53 +20,23 @@ public class Person {
     private final Name name;
     private final Phone phone;
     private final Email email;
-    private final Price price;
-    private final Info info;
-    private final Status status;
 
     // Data fields
     private final Address address;
-
     private final Set<Tag> tags = new HashSet<>();
+    private final Remark remark;
 
     /**
      * Every field must be present and not null.
      */
-    public Person(Name name, Phone phone, Email email, Address address,
-                  Price price, Info info, Status status, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, price, info, status, tags);
+    public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, Remark remark) {
+        requireAllNonNull(name, phone, email, address, tags, remark);
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.address = address;
-        this.price = price;
-        this.info = info;
-        this.status = status;
         this.tags.addAll(tags);
-    }
-
-    /**
-     * Creates a Person with only a name string.
-     * Not supposed to be used by external users.
-     */
-    private Person(String inputName) {
-        name = new Name(inputName);
-        phone = null;
-        email = null;
-        address = null;
-        this.price = null;
-        this.info = null;
-        this.status = null;
-    }
-
-    /**
-     * Creates a Person with only a name string.
-     * Not supposed to be used by external users.
-     * @param inputName
-     * @return invalid Person object
-     */
-    public static Person createTempFakePerson(String inputName) {
-        return new Person(inputName);
+        this.remark = remark;
     }
 
     public Name getName() {
@@ -84,31 +55,16 @@ public class Person {
         return address;
     }
 
-    public Price getPrice() {
-        return price;
-    }
-
-    public Info getInfo() {
-        return info;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    /**
-     * Returns true if this person's status is same as {@code anotherStatus}
-     */
-    public boolean hasSameStatus(Status anotherStatus) {
-        return status.equals(anotherStatus);
-    }
-
     /**
      * Returns an immutable tag set, which throws {@code UnsupportedOperationException}
      * if modification is attempted.
      */
     public Set<Tag> getTags() {
         return Collections.unmodifiableSet(tags);
+    }
+
+    public Remark getRemark() {
+        return remark;
     }
 
     /**
@@ -143,16 +99,14 @@ public class Person {
                 && otherPerson.getPhone().equals(getPhone())
                 && otherPerson.getEmail().equals(getEmail())
                 && otherPerson.getAddress().equals(getAddress())
-                && otherPerson.getPrice().equals(getPrice())
-                && otherPerson.getInfo().equals(getInfo())
-                && otherPerson.getStatus().equals(getStatus())
-                && otherPerson.getTags().equals(getTags());
+                && otherPerson.getTags().equals(getTags())
+                && otherPerson.getRemark().equals(getRemark());
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, email, address, price, info, status, tags);
+        return Objects.hash(name, phone, email, address, tags, remark);
     }
 
     @Override
@@ -164,19 +118,15 @@ public class Person {
                 .append("; Email: ")
                 .append(getEmail())
                 .append("; Address: ")
-                .append(getAddress())
-                .append("; Price: ")
-                .append(getPrice())
-                .append("; Info: ")
-                .append(getInfo())
-                .append("; Status: ")
-                .append(getStatus());
+                .append(getAddress());
 
         Set<Tag> tags = getTags();
         if (!tags.isEmpty()) {
             builder.append("; Tags: ");
             tags.forEach(builder::append);
         }
+        builder.append("; Remark: ")
+                .append(getRemark());
         return builder.toString();
     }
 

@@ -16,13 +16,8 @@ public class ResultDisplay extends UiPart<Region> {
     @FXML
     private TextArea resultDisplay;
 
-    /**
-     * Creates a {@code ResultDisplay} instance with a defaultText
-     * @param defaultText to be displayed at the initialisation of the class
-     */
-    public ResultDisplay(String defaultText) {
+    public ResultDisplay() {
         super(FXML);
-        resultDisplay.setText(defaultText);
     }
 
     public void setFeedbackToUser(String feedbackToUser) {
